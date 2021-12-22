@@ -18,14 +18,16 @@ class Followers extends StatelessWidget {
             Container(
               child: Text(
                 'Followers',
-                style: Theme.of(context).textTheme.title,
+                // style: Theme.of(context).textTheme.title,
+                style: Theme.of(context).textTheme.headline6,
               ),
             ),
             Container(
               margin: EdgeInsets.only(top: 3.0, bottom: 20.0),
               child: Text(
                 '125 People are following Lisa',
-                style: Theme.of(context).textTheme.display2.copyWith(color: Colors.grey),
+                // style: Theme.of(context).textTheme.display2.copyWith(color: Colors.grey),
+                style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.grey),
               ),
             ),
             FollowersListTile(

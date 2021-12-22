@@ -11,7 +11,7 @@ const double _kFlingVelocity = 2.0;
 
 class _BackdropPanel extends StatelessWidget {
   const _BackdropPanel({
-    Key key,
+    Key? key,
     this.onTap,
     this.onVerticalDragUpdate,
     this.onVerticalDragEnd,
@@ -19,11 +19,11 @@ class _BackdropPanel extends StatelessWidget {
     this.child,
   }) : super(key: key);
 
-  final VoidCallback onTap;
-  final GestureDragUpdateCallback onVerticalDragUpdate;
-  final GestureDragEndCallback onVerticalDragEnd;
-  final Widget header;
-  final Widget child;
+  final VoidCallback? onTap;
+  final GestureDragUpdateCallback? onVerticalDragUpdate;
+  final GestureDragEndCallback? onVerticalDragEnd;
+  final Widget? header;
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class _BackdropPanel extends StatelessWidget {
               onTap: onTap,
               child: header),
           Expanded(
-            child: child,
+            child: child!,
           ),
         ],
       ),
@@ -58,9 +58,9 @@ class _BackdropPanel extends StatelessWidget {
 /// can make a selection. The user can also configure the titles for when the
 /// front or back panel is showing.
 class Backdrop extends StatefulWidget {
-  final Widget frontPanel;
-  final Widget backPanel;
-  final Widget frontPanelHeader;
+  final Widget? frontPanel;
+  final Widget? backPanel;
+  final Widget? frontPanelHeader;
 
   const Backdrop({
     @required this.frontPanel,
@@ -76,7 +76,7 @@ class Backdrop extends StatefulWidget {
 
 class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin {
   final GlobalKey _backdropKey = GlobalKey(debugLabel: 'Backdrop');
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -121,8 +121,9 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
   }
 
   double get _backdropHeight {
-    final RenderBox renderBox = _backdropKey.currentContext.findRenderObject();
-    return renderBox.size.height;
+    // final RenderBox renderBox = _backdropKey.currentContext.findRenderObject();
+    // return renderBox.size.height;
+    return 100;
   }
 
   // By design: the panel can only be opened with a swipe. To close the panel
@@ -131,7 +132,7 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
   void _handleDragUpdate(DragUpdateDetails details) {
     if (_controller.isAnimating || _controller.status == AnimationStatus.completed) return;
 
-    _controller.value -= details.primaryDelta / _backdropHeight;
+    _controller.value -= details.primaryDelta! / _backdropHeight;
   }
 
   void _handleDragEnd(DragEndDetails details) {
@@ -160,7 +161,7 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
       key: _backdropKey,
       child: Stack(
         children: <Widget>[
-          widget.backPanel,
+          widget.backPanel!,
           PositionedTransition(
             rect: panelAnimation,
             child: _BackdropPanel(

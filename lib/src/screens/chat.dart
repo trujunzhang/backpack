@@ -6,7 +6,7 @@ class Chat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BackAppBar(),
+      appBar: BackAppBar(actions: [],),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
           vertical: 15.0,
@@ -18,11 +18,12 @@ class Chat extends StatelessWidget {
             Material(
               child: TextField(
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(borderSide: BorderSide(color: Colors.green[200])),
-                  focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey[200])),
+                  // border: OutlineInputBorder(borderSide: BorderSide(color: Colors.green[200])),
+                  // focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey[200])),
                   contentPadding: EdgeInsets.all(12.0),
                   hintText: 'Search by user or places',
-                  hintStyle: Theme.of(context).textTheme.body2.copyWith(color: Colors.grey),
+                  // hintStyle: Theme.of(context).textTheme.body2.copyWith(color: Colors.grey),
+                  hintStyle: Theme.of(context).textTheme.bodyText2!.copyWith(color: Colors.grey),
                 ),
               ),
             ),
@@ -30,7 +31,8 @@ class Chat extends StatelessWidget {
               margin: EdgeInsets.only(top: 25.0, bottom: 10.0),
               child: Text(
                 'Chats',
-                style: Theme.of(context).textTheme.title,
+                // style: Theme.of(context).textTheme.title,
+                style: Theme.of(context).textTheme.headline6,
               ),
             ),
             ChatListTile(

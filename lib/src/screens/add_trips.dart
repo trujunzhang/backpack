@@ -32,17 +32,20 @@ class AddTrips extends StatelessWidget {
             ),
             Text(
               'Add trips',
-              style: Theme.of(context).textTheme.headline,
+              // style: Theme.of(context).textTheme.headline,
+              style: Theme.of(context).textTheme.headline6,
             ),
             Column(
               children: <Widget>[
                 Text(
                   "Easily add your create your trip,",
-                  style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  // style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(color: Theme.of(context).primaryColorLight),
                 ),
                 Text(
                   "and let people know where you're heading.",
-                  style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  // style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(color: Theme.of(context).primaryColorLight),
                 ),
               ],
             ),

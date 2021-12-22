@@ -15,7 +15,8 @@ class RecoverAccount extends StatelessWidget {
           children: <Widget>[
             Text(
               'Recover your account',
-              style: Theme.of(context).textTheme.headline,
+              // style: Theme.of(context).textTheme.headline,
+              style: Theme.of(context).textTheme.headline4,
             ),
             TextField(
               decoration: InputDecoration(

@@ -27,7 +27,8 @@ class Landing extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       'backpack',
-                      style: Theme.of(context).textTheme.headline.copyWith(
+                      // style: Theme.of(context).textTheme.headline.copyWith(
+                      style: Theme.of(context).textTheme.headline6!.copyWith(
                             color: Theme.of(context).primaryColorDark,
                           ),
                     ),
@@ -44,7 +45,8 @@ class Landing extends StatelessWidget {
                   margin: EdgeInsets.only(top: 15.0),
                   child: Text(
                     'Travel with people. Make new friends.',
-                    style: Theme.of(context).textTheme.display2,
+                    // style: Theme.of(context).textTheme.display2,
+                    style: Theme.of(context).textTheme.headline4,
                   ),
                 ),
               ],

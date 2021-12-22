@@ -13,7 +13,8 @@ class PhoneNumber extends StatelessWidget {
           children: <Widget>[
             Text(
               'Your phone number',
-              style: Theme.of(context).textTheme.headline,
+              // style: Theme.of(context).textTheme.headline,
+              style: Theme.of(context).textTheme.headline4,
             ),
             TextField(
               textAlign: TextAlign.center,

@@ -17,7 +17,8 @@ class Login extends StatelessWidget {
               'Sign Up',
               style: Theme.of(context)
                   .textTheme
-                  .body2
+                  // .body2
+                  .bodyText2!
                   .copyWith(color: Theme.of(context).primaryColorLight, fontWeight: FontWeight.w700),
             ),
             onPressed: () {
@@ -54,7 +55,8 @@ class Login extends StatelessWidget {
                   'Forgot Password?',
                   style: Theme.of(context)
                       .textTheme
-                      .body2
+                      // .body2
+                      .bodyText2!
                       .copyWith(color: Theme.of(context).primaryColor, fontWeight: FontWeight.w700),
                 ),
                 onPressed: () {

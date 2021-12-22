@@ -3,8 +3,8 @@ import 'package:backpack/src/styles.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
-  final VoidCallback onPressed;
-  final String text;
+  final VoidCallback? onPressed;
+  final String? text;
   final Color textColor;
   final Color color;
   final bool isOutline;
@@ -12,7 +12,7 @@ class PrimaryButton extends StatelessWidget {
   final bool isTiny;
 
   PrimaryButton({
-    Key key,
+    Key? key,
     @required this.onPressed,
     this.text,
     this.textColor = backpackWhite,
@@ -40,21 +40,21 @@ class PrimaryButton extends StatelessWidget {
               )
             : BorderSide.none,
       ),
-      child: Text(text, style: TextStyle(fontFamily: 'Poppins')),
+      child: Text(text!, style: TextStyle(fontFamily: 'Poppins')),
       onPressed: onPressed,
     );
   }
 }
 
 class PrimaryIconButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final Color fillColor;
   final IconData icon;
   final Color iconColor;
   final double size;
 
   PrimaryIconButton({
-    Key key,
+    Key? key,
     @required this.onPressed,
     this.fillColor = backpackBlue,
     this.icon = Icons.add,

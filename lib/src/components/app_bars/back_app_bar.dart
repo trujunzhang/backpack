@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BackAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final List<Widget> actions;
+  final List<Widget>? actions;
 
   BackAppBar({key, this.actions}) : super(key: key);
 
@@ -26,7 +26,8 @@ class BackAppBar extends StatelessWidget implements PreferredSizeWidget {
                   Icon(Icons.arrow_back_ios),
                   Text(
                     'back',
-                    style: Theme.of(context).textTheme.body2,
+                    // style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText2,
                   ),
                 ],
               ),

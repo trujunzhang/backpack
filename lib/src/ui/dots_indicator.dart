@@ -21,9 +21,9 @@ class DotsIndicator extends AnimatedWidget {
   final Color activeColor;
 
   DotsIndicator({
-    this.controller,
-    this.itemCount,
-    this.onPageSelected,
+    required this.controller,
+    required this.itemCount,
+    required this.onPageSelected,
     this.color: Colors.white,
     this.activeColor: Colors.blue,
   }) : super(listenable: controller);

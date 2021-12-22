@@ -57,7 +57,8 @@ class OnBording extends StatelessWidget {
                 'Skip',
                 style: Theme.of(context)
                     .textTheme
-                    .body2
+                    // .body2
+                    .bodyText2!
                     .copyWith(color: Theme.of(context).primaryColorLight, fontWeight: FontWeight.w700),
               ),
               highlightColor: Colors.grey.shade100,

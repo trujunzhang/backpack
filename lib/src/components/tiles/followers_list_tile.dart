@@ -2,11 +2,11 @@ import 'package:backpack/src/components/tiles/circle_avatar_list_tile.dart';
 import 'package:flutter/material.dart';
 
 class FollowersListTile extends StatelessWidget {
-  final String title;
+  final String? title;
   final bool isFollowing;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
-  FollowersListTile({Key key, this.title, this.isFollowing = false, @required this.onPressed}) : super(key: key);
+  FollowersListTile({Key? key, this.title, this.isFollowing = false, @required this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,8 @@ class FollowersListTile extends StatelessWidget {
                 'Follow',
                 style: Theme.of(context)
                     .textTheme
-                    .display3
+                    // .display3
+                    .headline4!
                     .copyWith(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold),
               ),
               onPressed: () {},

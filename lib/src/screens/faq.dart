@@ -2,9 +2,9 @@ import 'package:backpack/src/components/app_bars/right_title_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class NewItem {
-  bool isExpanded;
-  final Widget header;
-  final Widget body;
+  bool? isExpanded;
+  final Widget? header;
+  final Widget? body;
   NewItem({this.isExpanded, this.header, this.body});
 }
 
@@ -14,7 +14,7 @@ class FAQ extends StatefulWidget {
 }
 
 class FAQState extends State<FAQ> {
-  List<NewItem> itemsList;
+  List<NewItem>? itemsList;
   @override
   void initState() {
     super.initState();
@@ -101,10 +101,10 @@ class FAQState extends State<FAQ> {
             ExpansionPanelList(
               expansionCallback: (int index, bool isExpanded) {
                 setState(() {
-                  itemsList[index].isExpanded = !isExpanded;
+                  itemsList![index].isExpanded = !isExpanded;
                 });
               },
-              children: itemsList.map((NewItem item) {
+              children: itemsList!.map((NewItem item) {
                 return ExpansionPanel(
                   headerBuilder: (BuildContext context, bool isExpanded) {
                     return Container(
@@ -112,7 +112,7 @@ class FAQState extends State<FAQ> {
                       child: item.header,
                     );
                   },
-                  isExpanded: item.isExpanded,
+                  isExpanded: item.isExpanded!,
                   body: Padding(
                     padding: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
                     child: item.body,

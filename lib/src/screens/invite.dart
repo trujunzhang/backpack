@@ -33,17 +33,20 @@ class Invite extends StatelessWidget {
             ),
             Text(
               'Invitations',
-              style: Theme.of(context).textTheme.headline,
+              // style: Theme.of(context).textTheme.headline,
+              style: Theme.of(context).textTheme.headline4,
             ),
             Column(
               children: <Widget>[
                 Text(
                   "Ask people to join you on",
-                  style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  // style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(color: Theme.of(context).primaryColorLight),
                 ),
                 Text(
                   "your trips.",
-                  style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  // style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(color: Theme.of(context).primaryColorLight),
                 ),
               ],
             ),

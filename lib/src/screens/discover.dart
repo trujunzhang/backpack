@@ -36,17 +36,20 @@ class Discover extends StatelessWidget {
             ),
             Text(
               'Discover',
-              style: Theme.of(context).textTheme.headline,
+              // style: Theme.of(context).textTheme.headline,
+              style: Theme.of(context).textTheme.headline6,
             ),
             Column(
               children: <Widget>[
                 Text(
                   "Discover where people are going, and",
-                  style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  // style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(color: Theme.of(context).primaryColorLight),
                 ),
                 Text(
                   "join them on their trips.",
-                  style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  // style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(color: Theme.of(context).primaryColorLight),
                 ),
               ],
             ),

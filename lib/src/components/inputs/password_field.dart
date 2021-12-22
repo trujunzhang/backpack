@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PasswordField extends StatefulWidget {
-  final Key fieldKey;
+  final Key? fieldKey;
   final String hintText;
-  final String labelText;
-  final String helperText;
+  final String? labelText;
+  final String? helperText;
   final Widget prefixIcon;
 
   PasswordField({

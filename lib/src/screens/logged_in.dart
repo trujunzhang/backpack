@@ -18,7 +18,8 @@ class LoggedIn extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text('backpack', style: Theme.of(context).textTheme.title),
+                      // Text('backpack', style: Theme.of(context).textTheme.title),
+                      Text('backpack', style: Theme.of(context).textTheme.headline6),
                       Container(
                         margin: EdgeInsets.only(left: 15.0),
                       ),
@@ -37,13 +38,15 @@ class LoggedIn extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     'Welcome back',
-                    style: Theme.of(context).textTheme.body1.copyWith(fontWeight: FontWeight.w700),
+                    // style: Theme.of(context).textTheme.body1.copyWith(fontWeight: FontWeight.w700),
+                    style: Theme.of(context).textTheme.bodyText1!.copyWith(fontWeight: FontWeight.w700),
                   ),
                   Container(
                     padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
                     child: Image.asset('assets/user.png'),
                   ),
-                  Text('Matt', style: Theme.of(context).textTheme.body1),
+                  // Text('Matt', style: Theme.of(context).textTheme.body1),
+                  Text('Matt', style: Theme.of(context).textTheme.bodyText1),
                   Container(
                     padding: EdgeInsets.only(top: 25.0, bottom: 25.0),
                     child: IconButton(
@@ -57,7 +60,8 @@ class LoggedIn extends StatelessWidget {
                   FlatButton(
                     child: Text(
                       'Not you?',
-                      style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                      // style: Theme.of(context).textTheme.body2.copyWith(color: Theme.of(context).primaryColorLight),
+                      style: Theme.of(context).textTheme.bodyText2!.copyWith(color: Theme.of(context).primaryColorLight),
                     ),
                     onPressed: () {},
                   ),

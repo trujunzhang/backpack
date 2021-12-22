@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class CircularContainer extends StatelessWidget {
   final double size;
   final Color color;
-  final Widget child;
-  final EdgeInsetsGeometry margin;
-  final EdgeInsetsGeometry padding;
+  final Widget? child;
+  final EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? padding;
   final bool hasBorder;
   final double borderWidth;
 
   CircularContainer({
-    Key key,
+    Key? key,
     this.size = 5.0,
     this.color = Colors.black,
     this.child,
