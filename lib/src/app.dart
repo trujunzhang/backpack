@@ -1,4 +1,4 @@
-import 'package:backpack/src/screens/profile.dart';
+import 'package:backpack/src/screens/index.dart';
 import 'package:flutter/material.dart';
 import 'package:backpack/src/colors.dart';
 import 'package:backpack/src/screens/onboarding.dart';
@@ -11,6 +11,7 @@ class App extends StatelessWidget {
       title: 'Flutter Demo',
       theme: _backpackTheme,
       home: Profile(),
+      // home: AddTrips(),
     );
   }
 }

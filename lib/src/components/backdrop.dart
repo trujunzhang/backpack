@@ -121,9 +121,9 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
   }
 
   double get _backdropHeight {
-    // final RenderBox renderBox = _backdropKey.currentContext.findRenderObject();
-    // return renderBox.size.height;
-    return 100;
+    final RenderObject? renderObject = _backdropKey.currentContext!.findRenderObject();
+    RenderBox renderBox = renderObject as RenderBox;
+    return renderBox.size.height;
   }
 
   // By design: the panel can only be opened with a swipe. To close the panel
